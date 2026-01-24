@@ -2,11 +2,12 @@ import { createBrowserRouter } from "react-router";
 import AdminRoute from "./AdminRoutes";
 import AdminDashboard from "../admin/AdminDashboard";
 import DashboardOverview from "../admin/DashboardOverview";
+import  App from "../App";
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <div>Hello World</div>,
+        element: <App/>,
     },
     // Admin Route
     {
