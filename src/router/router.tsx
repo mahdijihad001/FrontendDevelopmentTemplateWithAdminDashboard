@@ -2,12 +2,17 @@ import { createBrowserRouter } from "react-router";
 import AdminRoute from "./AdminRoutes";
 import AdminDashboard from "../admin/AdminDashboard";
 import DashboardOverview from "../admin/DashboardOverview";
-import  App from "../App";
+import App from "../App";
+import ProductHome from "../page/product/ProductHome";
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <App/>,
+        element: <App />,
+        children: [
+            { path: "", element: <ProductHome /> }, // default main content
+            // add more public routes here if needed
+        ],
     },
     // Admin Route
     {
